@@ -1,0 +1,65 @@
+* {
+    color: #ccc;
+    font-family: sans-serif;
+    margin: auto;
+}
+nav{
+    margin-top: 0.5em;
+    overflow: auto;
+}
+body{
+    padding: 0 2.5%; 
+    background-color: #1f1b16;
+    display: flexbox;
+    height: 100%;
+    
+    
+}
+h1{
+    text-align: center;
+}
+img{
+    border-radius: 2.5%;
+    border: 4px solid #101018; 
+    margin: 0em 1em; 
+    float: right; 
+    width: 33vw;
+    vertical-align: middle;
+}
+div{
+    padding-top: 2em;
+    width: 100%;
+    height: 100%;
+
+    /* korostus! */
+    border: 1px yellow solid;
+    /* korostus! */
+}
+p{
+    font-size: 1.25em;
+    line-height: 1.25;
+    vertical-align: baseline;
+    
+}
+button{
+    border: 2px solid;
+    border-color:#101018; 
+    font-size: 1.5em;
+    font-weight: bold;
+    float:left ;
+    margin-right: 0.5em;
+    background-color: #484238; 
+    border-radius: 0.25em; 
+    padding: 0.25em 0 ;
+    transition-duration: 750ms;
+    text-decoration: none;
+    cursor: pointer;
+    min-width: 4em;
+    padding: 0.25em;
+}
+button:hover{
+    background-color: #1b1810;
+}
+.naplink{
+    text-decoration: none;
+}
