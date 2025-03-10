@@ -42,24 +42,32 @@ p{
     
 }
 button{
+    background-color: #101018;
     border: 2px solid;
     border-color:#101018; 
+    border-radius: 0.25em; 
+    cursor: pointer;
+    float:left ;
     font-size: 1.5em;
     font-weight: bold;
-    float:left ;
     margin-right: 0.5em;
-    background-color: #484238; 
-    border-radius: 0.25em; 
     padding: 0.25em 0 ;
-    transition-duration: 750ms;
     text-decoration: none;
-    cursor: pointer;
     min-width: 4em;
     padding: 0.25em;
+    transition-duration: 200ms;
+
 }
 button:hover{
-    background-color: #1b1810;
+    background-color: #2a271d;
+    transition-duration: 400ms;
+}
+button:active{
+    opacity: 1;
+    background-color: #645747;
+
 }
 .naplink{
     text-decoration: none;
+    opacity: .8;
 }
