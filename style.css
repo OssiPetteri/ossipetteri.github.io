@@ -11,17 +11,28 @@ body{
 }
 
 h1, h2{
-    text-align: center;
+    /* text-align: center; */
+    /* max-width: 50%; */
+    /* display: block; */
     
  }
 
-header{
+/* header{
     margin-bottom: 1em;
-}
+} */
 
 hr{
     border: 2px solid #38342f;
     margin: 2em 25%;
+}
+
+iframe{  
+    width: 100%;  
+    height: auto;
+}
+
+input{
+    margin-left: 1em;
 }
 
 img{
@@ -34,29 +45,19 @@ img{
     min-width: 270px;
     vertical-align: middle;
 }
-iframe{  
-    width: 100%;  
-    height: auto;
-}
 
-div{
+/* div{
     margin-top: 1em;
-    width: 100%;
-    height: 100%;
     
-    /* korostus! */
-    border: 1px yellow solid;
-    /* korostus! */
-}
-
-nav{
-    display: inline;
-}
+} */
 
 p{
     line-height: 1.41em;
     margin-top: 0;
     padding-top: 0;
+    /* korostus! */
+    border: 1px yellow solid;
+    /* korostus! */
 }
 
 button{
@@ -65,7 +66,8 @@ button{
     border-color:#101018; 
     border-radius: 0.25em; 
     cursor: pointer;
-    float:left ;
+    /* float:left ;  */
+    /* estää rivinvaihdot: otsikko pakottaa itsensä samalle riville*/
     font-size: 1.5em;
     font-weight: 600;
     margin-right: 0.25em;
@@ -121,4 +123,15 @@ button:active{
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
+}
+/* ei toimi */
+.merit{
+    width: 17%;
+}
+/* ei toimi */
+.thumb{
+    width: 20%;
+    max-width: 768px;
+    min-width: 360px;
+    object-fit: contain;
 }
