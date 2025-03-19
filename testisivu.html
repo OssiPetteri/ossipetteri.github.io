@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styletesti.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styletesti.css">
 
   
     <!-- Google fontti oswald -->
@@ -85,10 +85,16 @@
         text-align: center;
         ">
         Tervetuloa kaatopaikalle, jossa testaan kaikenlaisia ITSELLENI uusia juttuja :)</p>
+      
+      <!-- Javascriptillä <p>-elementin manipuloinnin perusteet -->
+      <button onclick='document.getElementById("naama").innerHTML ="HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'
+        onclick="document.getElementById('naama').style.fontSize='3em'">hmmmm.</button>
 
-      <button onclick='document.getElementById("naama").innerHTML ="HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'>hmmmm.</button>
       <button onclick='document.getElementById("naama").innerHTML =">:/"'>...</button>
-  
+
+      <button type="button" onclick="document.getElementById('naama').style.fontSize='3em'">Bigger</button>
+
+      <button type="button" onclick="document.getElementById('naama').style.fontSize='0.5em'">smål</button>
         
       <p id="naama">
      
