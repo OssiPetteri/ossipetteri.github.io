@@ -1,21 +1,20 @@
 * {
     color: #eee;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    text-align: justify;
-    hyphens: auto;
 }
 
 body{
     padding: 0 1em; 
     background-color: #23201d;
+    text-align: justify;
 }
 
-h1, h2{
-    /* text-align: center; */
-    /* max-width: 50%; */
-    /* display: block; */
+/*h1, h2{
+     text-align: center; 
+     max-width: 50%; 
+     display: block;
     
- }
+ }*/
 
 /* header{
     margin-bottom: 1em;
@@ -55,9 +54,6 @@ p{
     line-height: 1.41em;
     margin-top: 0;
     padding-top: 0;
-    /* korostus! */
-    border: 1px yellow solid;
-    /* korostus! */
 }
 
 button{
@@ -66,8 +62,6 @@ button{
     border-color:#101018; 
     border-radius: 0.25em; 
     cursor: pointer;
-    /* float:left ;  */
-    /* estää rivinvaihdot: otsikko pakottaa itsensä samalle riville*/
     font-size: 1.5em;
     font-weight: 600;
     margin-right: 0.25em;
@@ -76,11 +70,14 @@ button{
     min-width: 4em;
     padding: 0.5em;
     box-shadow: 
-        inset .5em .5em .5em rgba(114, 114, 161, .125),
-        inset -.5em -.5em .5em rgba(160, 142, 121, .125);
+    inset .5em .5em .5em rgba(114, 114, 161, .125),
+    inset -.5em -.5em .5em rgba(160, 142, 121, .125);
     transition-duration: .35s;
     word-wrap: break-word;
-
+    
+    /* korostus! */
+    border: 1px yellow solid;
+    /* korostus! */
     
 }
 
@@ -126,7 +123,8 @@ button:active{
 }
 /* ei toimi */
 .merit{
-    width: 17%;
+    /* width: 17%; */
+    height: auto;
 }
 /* ei toimi */
 .thumb{
