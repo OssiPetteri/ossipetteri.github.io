@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styletesti.css">
+
   
     <!-- Google fontti oswald -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +15,12 @@
     <!-- Google fontti oswald -->
 
     <style>
-      .gohome {position: fixed;
+      .gohome {
+        float: right;
         border: 1 solid yellow;
+        position: fixed;
+        right: 1em;
+        bottom: 2em;
       }
 
       /* <!-- Google fontti oswald --> */
@@ -34,20 +40,40 @@
     </div> 
   <header>
     
-    <iframe 
-        src="nav.html" 
-        frameborder="0" 
-        height="100%" 
-        loading="lazy"
-        width="100%"
-        >
-    </iframe>
-
-    <input type="text" placeholder="laatikko">
+    <!-- Navigoint -->
+    <nav class="topbar">
+      <ul class="topbar-menu">
+            <!-- Home Button -->
+        <li class="menu-item">
+            <a href="index.html">Home</a>
+        </li>
     
-    <h1>TESTING!!!!</h1>
+            <!-- Dropdown Menu -->
+        <li class="menu-item dropdown">
+            <a href="#" class="dropdown-toggle">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a href="option1.html">Option 1</a></li>
+                <li><a href="option2.html">Option 2</a></li>
+                <li><a href="option3.html">Option 3</a></li>
+            </ul>
+        </li>
+    
+            <!-- Link -->
+        <li class="menu-item">
+            <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- navigointi päättyy -->
+
+    <div>
+
+      <input class="viereen" type="text" placeholder="laatikko">
+      
+      <h1 class="viereen">TESTING!!!!</h1>
+    </div>
   </header>
-    <!--tästä jossain vaiheessa oma-->
+    
     <div>
       <img class="thumb" src="img/tsivu.jpg" alt="vrum vrum" title="thumberson">
 
@@ -57,26 +83,16 @@
       <p style=" 
         font-size: 1.5em;
         text-align: center;
-      ">
+        ">
         Tervetuloa kaatopaikalle, jossa testaan kaikenlaisia ITSELLENI uusia juttuja :)</p>
-      <p>Stickyn ominaisuutta paisua koko ruudun kokoiseksi voisi ehkä joissain tapauksissa hyödyntää <br>
-        ⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠰⡿⠿⠛⠛⠻⠿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠀⠀⠀⣀⣄⡀⠀⠀⠀⠀⢀⣀⣀⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠀⠀⢸⣿⣿⣷⠀⠀⠀⠀⠛⠛⣿⣿⣿⡛⠿⠷⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠀⠀⠘⠿⠿⠋⠀⠀⠀⠀⠀⠀⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠀⣿⣷⣄⠀⢶⣶⣷⣶⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠈⠙⠻⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⣰⣿⣿⣿⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⣠⣾⣿⣿⣿⣥⣶⣶⣿⣿⣿⣿⣿⠿⠿⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠛⢿⣿⣿⣿⣿⣿⣿⡿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-        ??? väli              lyönti
+
+      <button onclick='document.getElementById("naama").innerHTML ="HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'>hmmmm.</button>
+      <button onclick='document.getElementById("naama").innerHTML =">:/"'>...</button>
+  
+        
+      <p id="naama">
+     
+        ??????
         </p>
 
       <p>

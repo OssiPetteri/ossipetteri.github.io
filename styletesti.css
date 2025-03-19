@@ -1,0 +1,84 @@
+.viereen{
+    display: inline-block;
+}
+
+.paalle{
+    display: block;
+}
+
+/* Topbar styles */
+    .topbar {
+        background-color: #23201d;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .topbar-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1em;
+    }
+
+    .menu-item {
+        position: relative;
+    }
+
+    .menu-item a {
+        color: #eee;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #38342f;
+        list-style: none;
+        padding: 0.5em 0;
+        margin: 0;
+        border-radius: 0.25em;
+    }
+
+    .dropdown-menu li a {
+        padding: 0.5em 1em;
+        display: block;
+    }
+
+    .menu-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+/* Card styling */
+    .card {
+        background-color: #2c2a28; /* Card background color */
+        color: #eee; /* Text color */
+        border: 2px solid #38342f; /* Border color */
+        border-radius: 0.5em; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        padding: 1em; /* Padding inside the card */
+        margin: 1em; /* Space between cards */
+        max-width: 300px; /* Limit card width */
+        text-align: center; /* Center-align text */
+        display: inline-block; /* Cards appear side by side */
+    }
+
+    /* Highlight main points */
+    .card p:first-of-type {
+        font-size: 1.25em; /* Larger font size for the first paragraph */
+        font-weight: bold; /* Bold text for emphasis */
+        margin-bottom: 0.5em; /* Space below the main point */
+    }
+
+    /* Add hover effect */
+    .card:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+        transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    }
