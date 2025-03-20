@@ -110,9 +110,9 @@ button:active{
 /* cv kortit */
 
 .card{
-    border: 4px #38342f solid;
+    border: 8px #38342f solid;
     border-radius: 1em;
-    margin: 0.25em;
+    margin: 2.5em;
     padding: 0.5em;
     min-width: 25%;
     max-width: 30em;
