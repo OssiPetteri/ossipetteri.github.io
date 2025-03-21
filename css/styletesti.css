@@ -6,6 +6,9 @@
     display: block;
 }
 
+#ugly ~ p{
+    font-family: arial;}
+
 /* Topbar styles */
     .topbar {
         background-color: #23201d;

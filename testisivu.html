@@ -77,14 +77,13 @@
     <div>
       <img class="thumb" src="img/tsivu.jpg" alt="vrum vrum" title="thumberson">
 
-      <iframe 
-        src="https://www.google.fi/maps/@61.6867567,27.2631248,15.72z/data=!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" frameborder="0"></iframe>
       
       <p style=" 
         font-size: 1.5em;
         text-align: center;
         ">
         Tervetuloa kaatopaikalle, jossa testaan kaikenlaisia ITSELLENI uusia juttuja :)</p>
+        <p>Koodin kommenteissa myös lähes oppimispäiväkirjamaista reflektointia</p>
       
       <!-- Javascriptillä <p>-elementin manipuloinnin perusteet -->
       <button onclick='document.getElementById("naama").innerHTML ="HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'
@@ -92,17 +91,35 @@
 
       <button onclick='document.getElementById("naama").innerHTML =">:/"'>...</button>
 
-      <button type="button" onclick="document.getElementById('naama').style.fontSize='3em'">Bigger</button>
+      <!-- JS script-tagin sisään, varsinaisessa koodissa paras pistää bodyn loppuun sivun latautumisen tehostamiseksi -->
+      <button type="button" onclick="bigger()">Bigger</button>
+        <script>
+          function bigger() {
+            document.getElementById('naama').style.fontSize='3em';
+          }
+        </script>
 
       <button type="button" onclick="document.getElementById('naama').style.fontSize='0.5em'">smål</button>
         
       <p id="naama">
-     
         ??????
         </p>
 
-      <p>
-       Googel fontti oswald </p>
+    </div>
+
+    <!-- ulkoinen JS-tiedosto -->
+    <div>
+      <button type="button" onclick="ulko()">haetaanpa scriptiä ulkoisesta tiedostosta (painikkeet ovat täsmälleen suunniteltu näin pitkiä tekstejä varten heheheheheheheh)</button>
+      <script src="js/jstesti.js">
+      </script>
+      <p id="ulkohaku">...</p>
+    </div>
+
+      <p> Googel fontti oswald 
+      </p>
+
+      <!-- Fontin vaihto id-elementti-kombolla (#id ~ elementti {}) -->
+      <p id="ugly"> Onpas jotenkin huono fontti...</p>
        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, consequuntur tempore. Nesciunt, necessitatibus sit? Necessitatibus deserunt, maxime, ea, dignissimos mollitia adipisci fugiat at veritatis nobis possimus velit labore. Saepe, temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugit voluptates aliquid itaque? Qui dolore repellat, laboriosam et at odio repellendus unde non voluptate harum corporis. Saepe perspiciatis incidunt explicabo.
         Voluptate eum molestiae cumque. Quis itaque atque nostrum dicta voluptatem culpa cupiditate repudiandae earum magni! Laborum quasi, cumque nam debitis esse ex quisquam sit voluptatum, odit non laboriosam id exercitationem?
         Incidunt delectus molestiae corporis, deleniti architecto commodi repellendus error? Modi cumque qui pariatur commodi est fuga laborum, expedita earum, sapiente, molestiae quam exercitationem cum atque doloremque! Beatae officia hic ipsam!
