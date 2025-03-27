@@ -1,0 +1,75 @@
+/* Print-specific styles for A4 portrait orientation */
+@media print {
+    /* General page setup */
+    body {
+        margin: 0;
+        padding: 1cm; 
+        font-size: 12pt; 
+        color: #000; 
+        background: none;
+    }
+
+    /* Remove unnecessary elements for printing */
+    .gohome, nav, footer, .topbar, input, input[type="text"], button, select, textarea, a {
+        display: none;
+    }
+
+    /* Ensure content fits within A4 dimensions */
+    body, div, p, h1, h2, h3, ul, li {
+        color: #000; /* Explicitly set text color for print */
+        max-width: 100%; 
+        page-break-inside: avoid; /* Avoid breaking content across pages */
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Specific adjustments for your content */
+    .thumb {
+        display: block;
+        margin: 0 auto; /* Center the image */
+    }
+
+    h1, h2, h3 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        margin: 0.5em 0;
+    }
+
+    /* Optional: Add a border to visually separate sections */
+    .card {
+        border: 1px solid #000;
+        padding: 1em;
+        margin-bottom: 1em;
+        page-break-inside: avoid;
+    }
+}
+/* Explanation:
+General Page Setup:
+
+margin and padding ensure proper spacing for printing.
+font-size is adjusted for readability.
+background: none removes unnecessary background colors or images.
+Hiding Unnecessary Elements:
+
+The .gohome button, navigation bar, and footer are hidden to avoid clutter on the printed page.
+Content Formatting:
+
+max-width ensures content fits within the page width.
+page-break-inside: avoid prevents elements like .card from splitting across pages.
+Image Adjustments:
+
+Images are resized to fit within the page while maintaining their aspect ratio.
+Section Borders:
+
+A border is added to .card elements to visually separate them.
+How to Test:
+Add this CSS to your style.css file.
+Open testisivu.html in your browser.
+Use the browser's print preview (Ctrl + P on Windows) to see how the page looks when printed.
+Let me know if you need further adjustments! */
