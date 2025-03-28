@@ -1,3 +1,19 @@
+footer {
+    background-color: #23201d;
+    color: #eee;
+    padding: 1em;
+    text-align: center;
+}
+
+p::first-letter {
+    font-family: cursive;
+    font-weight: bold; /* Styles the first line of the paragraph */
+    font-size: 3em; /* Increases the font size */
+    color: #444; /* Changes the color */
+    float: left; /* Floats the letter to the left */
+    margin-right: 0.1em; /* Adds space between the letter and the text */
+}
+
 .viereen{
     display: inline-block;
 }
@@ -10,12 +26,18 @@
     font-family: arial;}
 
 /* Topbar styles */
+    .contact {
+        display: flexbox;
+        justify-self: end;
+    }
+
     .topbar {
         background-color: #23201d;
         padding: 1em;
-        display: flex;
+        display: flexbox;
         justify-content: space-between;
         align-items: center;
+        border: solid white;
     }
 
     .topbar-menu {
@@ -85,3 +107,33 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
         transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
     }
+
+[class*="ratio"]{
+    background-color: darkblue;
+    flex-wrap: wrap;
+    max-width: 50%;
+}
+/* kohdistaa muotoilun kaikkeen, joka alkaa/sisältää "ratio". */
+
+.ratio-small {
+    flex: 0.618;
+    border: red 1px solid;
+}
+.ratio-large {
+    flex: 1.618;
+    border: blue 1px solid;
+}
+.ratio-side {
+    min-width: 19u;
+    flex: 0.309;
+    border: green 1px solid;
+}
+.mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}

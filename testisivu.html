@@ -3,145 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- bootstrap CSS, mielellään ennen muita järjestyshierarkian-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styletesti.css">
-  <link rel="stylesheet" href="css/a4.css">
+  <link rel="stylesheet" href="css/print.css">
 
-  
-    <!-- Google fontti oswald -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <!-- Google fontti oswald -->
+  <!-- Google Font: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
-    <style>
-      .gohome {
-        float: right;
-        border: 1 solid yellow;
-        position: fixed;
-        right: 1em;
-        bottom: 2em;
-      }
+  <style>
+    .gohome {
+      float: right;
+      border: 1px solid yellow;
+      position: fixed;
+      right: 1em;
+      bottom: 2em;
+    }
 
-      /* <!-- Google fontti oswald --> */
+    /* <!-- Google fontti oswald --> */
       *{font-family: oswald;}
        /* <!-- Google fontti oswald --> */
       
-      </style>
-
-<title>TESTING!</title>
+  </style>  
+  </style>
+  <title>TESTING!</title>
 </head>
-
 <body>
-  <div class="gohome" style="border: 1px solid;">
-    <a href="index.html"> 
-      <button >I'm afraid, take me back home :,(</button>
+  <!-- Go Home Button -->
+  <div class="gohome">
+    <a href="index.html">
+      <button>I'm afraid, take me back home :,(</button>
     </a>
-    </div> 
+  </div>
+
   <header>
-    
-    <!-- Navigoint -->
+    <!-- Navigation -->
     <nav class="topbar">
       <ul class="topbar-menu">
-            <!-- Home Button -->
-        <li class="menu-item">
-            <a href="index.html">Home</a>
-        </li>
-    
-            <!-- Dropdown Menu -->
+        <li class="menu-item"><a href="index.html">Home</a></li>
         <li class="menu-item dropdown">
-            <a href="#" class="dropdown-toggle">Dropdown</a>
-            <ul class="dropdown-menu">
-              <li><a href="option1.html">Option 1</a></li>
-              <li><a href="option2.html">Option 2</a></li>
-              <li><a href="option3.html">Option 3</a></li>
-            </ul>
+          <a href="#" class="dropdown-toggle">Dropdown</a>
+          <ul class="dropdown-menu">
+            <li><a href="option1.html">Option 1</a></li>
+            <li><a href="option2.html">Option 2</a></li>
+            <li><a href="option3.html">Option 3</a></li>
+          </ul>
         </li>
-    
-            <!-- Link -->
-        <li class="menu-item">
-            <a href="contact.html">Contact</a>
-        </li>
+        <li class="menu-item ms-auto"><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <!-- navigointi päättyy -->
-
+<!-- navigointi päättyy -->
     <div>
-
       <input class="viereen" type="text" placeholder="laatikko">
-      
       <h1 class="viereen">TESTING!!!!</h1>
     </div>
   </header>
-    
-    <div>
-      <img class="thumb" src="img/tsivu.jpg" alt="vrum vrum" title="thumberson">
 
-      
-      <p style=" 
-        font-size: 1.5em;
-        text-align: center;
-        ">
-        Tervetuloa kaatopaikalle, jossa testaan kaikenlaisia ITSELLENI uusia juttuja :)</p>
-        <p>Koodin kommenteissa myös lähes oppimispäiväkirjamaista reflektointia</p>
-      
-      <!-- Javascriptillä <p>-elementin manipuloinnin perusteet -->
-      <button onclick='document.getElementById("naama").innerHTML ="HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'
-        onclick="document.getElementById('naama').style.fontSize='3em'">hmmmm.</button>
-
-      <button onclick='document.getElementById("naama").innerHTML =">:/"'>...</button>
-
-      <!-- JS script-tagin sisään, varsinaisessa koodissa paras pistää bodyn loppuun sivun latautumisen tehostamiseksi -->
-      <button type="button" onclick="bigger()">Bigger</button>
-        <script>
-          function bigger() {
-            document.getElementById('naama').style.fontSize='3em';
-          }
-        </script>
-
-      <button type="button" onclick="document.getElementById('naama').style.fontSize='0.5em'">smål</button>
-        
-      <p id="naama">
-        ??????
-        </p>
-
+  <!-- Flexbox Section -->
+  <div style="display: flexbox; border: 2px solid yellow;">
+    <div class="ratio-small">
+      <p style="font-size: 1.5em; text-align: center;">
+        Tervetuloa kaatopaikalle, jossa testaan kaikenlaisia ITSELLENI uusia juttuja :)
+      </p>
+      <p>Koodin kommenteissa myös lähes oppimispäiväkirjamaista reflektointia</p>
+      <p>(ensimmäinen kirjain <cite title="styletesti.css">styletestin</cite> p::first-letterissä)</p>
     </div>
 
-    <!-- ulkoinen JS-tiedosto -->
-    <div>
-      <button type="button" onclick="ulko()">haetaanpa scriptiä ulkoisesta tiedostosta (painikkeet ovat täsmälleen suunniteltu näin pitkiä tekstejä varten heheheheheheheh)</button>
-      <script src="js/jstesti.js">
+    <div class="ratio-large mid">
+      <div class="d-flex flex-column align-items-start">
+        <div class="d-flex">
+          <button class="me-2" onclick='document.getElementById("naama1").innerHTML ="HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'>hmmmm.</button>
+          <button class="me-2" onclick='document.getElementById("naama1").innerHTML =">:/"'>...</button>
+          <button class="me-2" type="button" onclick="document.getElementById('naama1').style.fontSize='0.5em'">smål</button>
+          <button type="button" onclick="bigger1()">Bigger</button>
+        </div>
+        <p id="naama1" class="mid w-100 mt-2 text-break" style="
+      overflow-wrap: break-word;">??????</p>
+      </div>
+      <script>
+        function bigger1() {
+          document.getElementById('naama1').style.fontSize = '3em';
+        }
       </script>
-      <p id="ulkohaku">...</p>
     </div>
 
-      <p> Googel fontti oswald 
+    <div class="ratio-side mid">
+      <p>FLEXBOX</p>
+    </div>
+  </div>   <!-- ? -->
+  <!-- flexBOX päättyy -->
+   <!-- flex alkaa -->
+  <div style="display: flex; border: 2px solid yellow;">
+    <div class="ratio-small">
+      <p style="font-size: 1.5em; text-align: center;">
+        "Tervetuloa kaatopaikalle, jossa testaan kaikenlaisia ITSELLENI uusia juttuja :)"
       </p>
+      <p>Koodin kommenteissa myös lähes oppimispäiväkirjamaista reflektointia</p>
+      <p>(ensimmäinen kirjain <cite title="styletesti.css">styletestin</cite> p::first-letterissä)</p>
+    </div>
 
-      <!-- Fontin vaihto id-elementti-kombolla (#id ~ elementti {}) -->
-      <p id="ugly"> Onpas jotenkin huono fontti...</p>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, consequuntur tempore. Nesciunt, necessitatibus sit? Necessitatibus deserunt, maxime, ea, dignissimos mollitia adipisci fugiat at veritatis nobis possimus velit labore. Saepe, temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugit voluptates aliquid itaque? Qui dolore repellat, laboriosam et at odio repellendus unde non voluptate harum corporis. Saepe perspiciatis incidunt explicabo.
-        Voluptate eum molestiae cumque. Quis itaque atque nostrum dicta voluptatem culpa cupiditate repudiandae earum magni! Laborum quasi, cumque nam debitis esse ex quisquam sit voluptatum, odit non laboriosam id exercitationem?
-        Incidunt delectus molestiae corporis, deleniti architecto commodi repellendus error? Modi cumque qui pariatur commodi est fuga laborum, expedita earum, sapiente, molestiae quam exercitationem cum atque doloremque! Beatae officia hic ipsam!
-        Ea exercitationem et eum similique facere voluptas, quod assumenda consectetur voluptatum illum amet unde mollitia praesentium sequi. Consequuntur fuga eligendi, eos doloribus, tenetur deleniti aspernatur quisquam, molestias assumenda unde mollitia.
-        Hic blanditiis placeat eius dicta. Reprehenderit illum soluta porro illo modi fugiat aut nesciunt sint vel rem! Eius iusto quo quibusdam nihil ducimus rem earum, dolor beatae. Obcaecati, rerum commodi.
-      </p>
-<lore>lore?</lore>
-<lore>LORE?</lore>
-<lore>ipsum!</lore>
-<lore>IPSUM!!!</lore>
-<lore>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dicta incidunt laborum. Soluta iusto, blanditiis impedit a enim vel, facilis repudiandae, dicta reiciendis cumque velit. Nam cumque porro nemo numquam.</lore>
+    <div class="ratio-large mid">
+      <div class="d-flex flex-column align-items-start">
+        <div class="d-flex">
+          <button class="me-2" onclick='document.getElementById("naama2").innerHTML ="HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'>hmmmm.</button>
+          <button class="me-2" onclick='document.getElementById("naama2").innerHTML =">:/"'>...</button>
+          <button class="me-2" type="button" onclick="document.getElementById('naama2').style.fontSize='0.5em'">smål</button>
+          <button type="button" onclick="bigger2()">Bigger</button>
+        </div>
+        <p id="naama2" class="mid w-100 mt-2 text-break" style="
+      overflow-wrap: break-word;">??????</p>
+      </div>
+      <script>
+        function bigger2() {
+          document.getElementById('naama2').style.fontSize = '3em';
+        }
+      </script>
+    </div>
+
+    <div class="ratio-side mid">
+      <p>FLEXXXX</p>
+    </div>
+  </div>   
+  <!-- flex päättyy -->
+
+  <!-- kuva ja nappulat ja teksti -->
+  <div style="margin: auto;">
+    <img class="thumb" src="img/tsivu.jpg" alt="vrum vrum" title="thumberson">
+  <!-- External JS Test -->
+    <button type="button" onclick="ulko()">haetaanpa scriptiä ulkoisesta tiedostosta</button>
+    <script src="js/jstesti.js"></script>
+    <p id="ulkohaku">...</p>
   </div>
-  <hr>
-  
-  <!-- ilmoituslaatikko -->
-  <div>
-    <script>
-      // alert ja window.alert ovat sama asia. .alertia edeltävä sana on avainsana, joka kertoo objektin, johon metodi liittyy
-      alert("Seikkailu omalla vastuulla!");
-    </script>
+
+  <p>Google fontti oswald</p>
+  <p id="ugly">Onpas jotenkin huono fontti...</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+
+  <!-- Bootstrap and Popper Test -->
+  <h2>Bootstrap ja Popper</h2>
+  <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+    <button id="popperButton" type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" title="Popper.js is working!">
+      Hover me to test Popper.js
+    </button>
   </div>
+  <div class="d-flex justify-content-center">
+    <button id="moveButton" class="btn btn-danger mt-3">Move Tooltip Button</button>
+  </div>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+    const popperButton = document.getElementById('popperButton');
+    const moveButton = document.getElementById('moveButton');
+    let position = 0;
+
+    moveButton.addEventListener('click', () => {
+      const positions = ['top', 'right', 'bottom', 'left'];
+      position = (position + 1) % positions.length;
+      popperButton.setAttribute('data-bs-placement', positions[position]);
+      tooltipList.forEach(tooltip => tooltip.dispose());
+      tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    });
+  </script>
+
+  <!-- Reset Button -->
+  <div class="d-flex justify-content-center mt-3">
+    <button id="resetButton" class="btn btn-primary">Nollaa skritpit (ai auttoi :) )</button>
+  </div>
+  <script>
+    const initialState = {
+      naama1: document.getElementById("naama1").innerHTML,
+      naama2: document.getElementById("naama2").innerHTML,
+      naama1FontSize: document.getElementById("naama1").style.fontSize,
+      naama2FontSize: document.getElementById("naama2").style.fontSize,
+      ulkohaku: document.getElementById("ulkohaku").innerHTML,
+    };
+
+    document.getElementById("resetButton").addEventListener("click", () => {
+      document.getElementById("naama1").innerHTML = initialState.naama1;
+      document.getElementById("naama2").innerHTML = initialState.naama2;
+      document.getElementById("naama1").style.fontSize = initialState.naama1FontSize;
+      document.getElementById("naama2").style.fontSize = initialState.naama2FontSize;
+      document.getElementById("ulkohaku").innerHTML = initialState.ulkohaku;
+    });
+  </script>
+
+  <!-- Bootstrap Test (No Popper) -->
+  <h2>Bootstrap Test (No Popper)</h2>
+  <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+    <button class="btn btn-success">Bootstrap Button Test</button>
+  </div>
+
   <footer>c Ossi 2025 (footer)</footer>
+  <script>
+    // alert ja window.alert ovat sama asia. .alertia edeltävä sana on avainsana, joka kertoo objektin, johon metodi liittyy
+    alert("Seikkailu omalla vastuulla!");
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
