@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .intro-screen, .main-screen {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intro-screen {
+      background: #141211;
+      color: #eee;
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    .main-screen {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .top-bar {
+      background: #38342f;
+      color: #eee;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 38% 62%; /* Golden ratio */
+      height: 100%;
+    }
+
+    .menu {
+      background: #101018;
+      color: #eee;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 1.25em;
+      margin: 1rem 0;
+    }
+
+    .visual {
+      background: #645747;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Intro Screen -->
+  <div class="intro-screen" onclick="document.getElementById('main').scrollIntoView()">
+    Welcome! Click or tap anywhere to continue.
+  </div>
+
+  <!-- Main Screen -->
+  <div id="main" class="main-screen">
+    <div class="top-bar">
+      Top Bar
+    </div>
+    <div class="content">
+      <div class="menu">
+        <a href="#">Start</a>
+        <a href="#">Options</a>
+        <a href="#">Credits</a>
+        <a href="#">Exit</a>
+      </div>
+      <div class="visual">
+        Visual Representation
+      </div>
+    </div>
+  </div>
+</body>
+</html>
