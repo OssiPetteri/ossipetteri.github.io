@@ -45,6 +45,8 @@
       display: grid;
       grid-template-columns: 38% 62%; /* Golden ratio */
       height: 100%;
+      /* align-items: center; */
+      justify-content: center;
     }
 
     .menu {
@@ -55,6 +57,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      min-width: 12ch;
+
     }
 
     .menu a {
@@ -72,11 +76,12 @@
       color: #fff;
       font-size: 2em;
     }
+
   </style>
 </head>
 <body>
   <!-- Intro Screen -->
-  <div class="intro-screen" onclick="document.getElementById('main').scrollIntoView()">
+  <div class="intro-screen" onclick="setTimeout(() => document.getElementById('main').scrollIntoView(), 273)">
     Welcome! Click or tap anywhere to continue.
   </div>
 
@@ -90,12 +95,14 @@
         <a href="#">Start</a>
         <a href="#">Options</a>
         <a href="#">Credits</a>
-        <a href="#">Exit</a>
+        <a href="index.html">Exit</a>
       </div>
       <div class="visual">
         Visual Representation
       </div>
     </div>
   </div>
+
+  <a href="#" class="contact-link">Contact</a>
 </body>
 </html>
