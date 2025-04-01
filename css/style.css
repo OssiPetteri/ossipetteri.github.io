@@ -9,20 +9,25 @@ body{
     background-color: #141211;
     text-align: justify;
     margin: 0;
-}
+    }
+
+
+
 
 h1, h2, h3{
     color: #eee;
     margin: auto; 
     margin-bottom: 1em;
 }
-           
+ 
+header{
+    padding: 1em;
+    text-align: center;
+}
 p {
     line-height: 1.41em;
     margin-top: 0;
     text-align-last: left;
-    /* text-indent: 1em; 
-        parempi tehdä tyyliksi tai ID:ksi */
 }
 
     
@@ -109,9 +114,6 @@ button:hover{
 
 .naplink{
     text-decoration: none;
-    /* korostus! */
-    border: 1px yellow solid;
-    /* korostus! */
 }
 
 /* cv kortit */
@@ -134,6 +136,9 @@ button:hover{
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
+    /* korostus! */
+        border: 1px yellow solid;
+        /* korostus! */
 }
 /* ei toimi */
 .merit{
