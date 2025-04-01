@@ -1,3 +1,38 @@
+@media (orientation: portrait) {
+    /* Styles for portrait orientation */
+    html, body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: pink;
+    }
+}
+    /* testaa syötemetodin avulla, onko kyseessä mobiililaite vai tietokone */
+@media (pointer: coarse) {
+    /* Styles for mobile devices (touch input) */
+    body {
+      background-color: lightblue;
+    }
+  }
+
+* {
+    /* overflow-x: hidden;  */
+        /*EI OPTIMI! Prevents overflow. periaatteessa toimii mutta tekstiosiot haluavat nyt scrollata, vaikka ylivuotoa ei tapahtuisikaan */
+}
+body{
+    /* taustakuva CSS:sä */
+    background-image: url("/img/img-912.jpg");
+    background-attachment: fixed; /* Kiinnittää taustakuvan */
+    background-repeat: repeat-x; 
+    background-position:top;
+    background-size: contain; 
+    }
+code{
+    background-color: #38342f; /* Background color for code blocks */
+    color: #eee; /* Text color for code blocks */
+    padding: 0.5em; /* Padding inside code blocks */
+    margin: 1em;
+    border-radius: 0.25em; /* Rounded corners for code blocks */
+    text-align: center;
+}
 footer {
     background-color: #23201d;
     color: #eee;
@@ -9,7 +44,7 @@ p::first-letter {
     font-family: cursive;
     font-weight: bold; /* Styles the first line of the paragraph */
     font-size: 3em; /* Increases the font size */
-    color: #444; /* Changes the color */
+    color: #678; /* Changes the color */
     float: left; /* Floats the letter to the left */
     margin-right: 0.1em; /* Adds space between the letter and the text */
 }
@@ -27,17 +62,21 @@ p::first-letter {
 
 /* Topbar styles */
     .contact {
-        display: flexbox;
+        display: flex;
         justify-self: end;
     }
 
     .topbar {
         background-color: #23201d;
         padding: 1em;
-        display: flexbox;
+        display: block;
         justify-content: space-between;
         align-items: center;
         border: solid white;
+        position: fixed;
+        width: 100%;
+        max-width: 100%;
+        /* toimii */
     }
 
     .topbar-menu {
@@ -59,6 +98,7 @@ p::first-letter {
         display: block;
     }
 
+
     .dropdown-menu {
         display: none;
         position: absolute;
@@ -79,6 +119,8 @@ p::first-letter {
     .menu-item.dropdown:hover .dropdown-menu {
         display: block;
     }
+
+    
 
 /* Card styling */
     .card {
@@ -109,7 +151,7 @@ p::first-letter {
     }
 
 [class*="ratio"]{
-    background-color: darkblue;
+    background-color:rgba(red, green, blue, alpha);
     flex-wrap: wrap;
     max-width: 50%;
 }
@@ -117,17 +159,22 @@ p::first-letter {
 
 .ratio-small {
     flex: 0.618;
-    border: red 1px solid;
+    border-style: groove;
+    border-color: red;
+    border-width: 10px;
 }
 .ratio-large {
     flex: 1.618;
-    border: blue 1px solid;
+    border-style: ridge inset outset groove;
+    border-color: white;
+    border-width: 10px;
 }
 .ratio-side {
     min-width: 19u;
     flex: 0.309;
-    border: green 1px solid;
-}
+    border-style: inset;
+    border-color: black;
+    border-width: 10px;}
 .mid{
     display: flex;
     justify-content: center;

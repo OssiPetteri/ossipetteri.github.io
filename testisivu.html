@@ -7,7 +7,7 @@
   <!-- bootstrap CSS, mielellään ennen muita järjestyshierarkian-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styletesti.css">
   <link rel="stylesheet" href="css/print.css">
 
@@ -30,9 +30,9 @@
        /* <!-- Google fontti oswald --> */
       
   </style>  
-  </style>
-  <title>TESTING!</title>
+  <title>TESTING! Mental danger!</title>
 </head>
+
 <body>
   <!-- Go Home Button -->
   <div class="gohome">
@@ -45,7 +45,9 @@
     <!-- Navigation -->
     <nav class="topbar">
       <ul class="topbar-menu">
-        <li class="menu-item"><a href="index.html">Home</a></li>
+        <li class="menu-item"><a href="index.html#main">Home</a></li>
+        <li class="menu-item"><a href="landing-page.html">Landing</a></li>
+
         <li class="menu-item dropdown">
           <a href="#" class="dropdown-toggle">Dropdown</a>
           <ul class="dropdown-menu">
@@ -70,8 +72,11 @@
       <p style="font-size: 1.5em; text-align: center;">
         Tervetuloa kaatopaikalle, jossa testaan kaikenlaisia ITSELLENI uusia juttuja :)
       </p>
+      <p>Testiteksti livepuhelinyhteyden toimivuutta varten</p>
       <p>Koodin kommenteissa myös lähes oppimispäiväkirjamaista reflektointia</p>
-      <p>(ensimmäinen kirjain <cite title="styletesti.css">styletestin</cite> p::first-letterissä)</p>
+      <p>(ensimmäinen kirjain <cite title="styletesti.css">styletestin
+        </cite><br><code> p::first-letterissä )</code>
+      </p>
     </div>
 
     <div class="ratio-large mid">
@@ -99,7 +104,7 @@
   <!-- flexBOX päättyy -->
    <!-- flex alkaa -->
   <div style="display: flex; border: 2px solid yellow;">
-    <div class="ratio-small">
+    <div class="ratio-small" style="flex-shrink: 0;">
       <p style="font-size: 1.5em; text-align: center;">
         "Tervetuloa kaatopaikalle, jossa testaan kaikenlaisia ITSELLENI uusia juttuja :)"
       </p>
@@ -109,7 +114,7 @@
 
     <div class="ratio-large mid">
       <div class="d-flex flex-column align-items-start">
-        <div class="d-flex">
+        <div class="d-flex" style="flex-wrap: wrap; justify-content: center;">
           <button class="me-2" onclick='document.getElementById("naama2").innerHTML ="HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"'>hmmmm.</button>
           <button class="me-2" onclick='document.getElementById("naama2").innerHTML =">:/"'>...</button>
           <button class="me-2" type="button" onclick="document.getElementById('naama2').style.fontSize='0.5em'">smål</button>
@@ -143,17 +148,39 @@
   <p>Google fontti oswald</p>
   <p id="ugly">Onpas jotenkin huono fontti...</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-
+  
   <!-- Bootstrap and Popper Test -->
-  <h2>Bootstrap ja Popper</h2>
-  <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
-    <button id="popperButton" type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" title="Popper.js is working!">
-      Hover me to test Popper.js
-    </button>
+  <div class="container">
+    <header><h2>Bootstrap ja Popper</h2></header>
+    <div class="row">
+      <div class="col-sm">
+        One of three columns
+        <div class="d-flex justify-content-center align-items-center" >
+          <button id="popperButton" type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" title="Popper.js is working!">
+            Hover me to test Popper.js
+          </button>
+        </div>
+      </div>
+      <div class="col-sm">
+        2 of three columns
+        <div class="d-flex justify-content-center">
+          <button id="moveButton" class="btn btn-danger mt-3">Move Tooltip Button</button>
+         <a href="landing-page.html"> <button id="moveButton" class="btn btn-danger mt-3">Parent frame testi</button></a>
+         <p>Olisikohan parent frame tapauksiin, joissa navigointi- ja sivupalkki halutaan säilyttää, mutta sisältö ladata eri sivulta (∩ ⌣̀_⌣́) </p>
+         <p>Pitäisiköhän myös yhdenmukaisuuden vuoksi tämä teksti olla kommenttina ╭(-᷅_-᷄ 〝)╮</p>
+         <p>HAUSKA HARJOITUS! Tämän osion muotoilu niin, että </p>
+        </div>
+      </div>
+      <div class="col-sm">
+        3 of three columns
+        <!-- Reset Button -->
+        <div class="d-flex justify-content-center mt-3">
+          <button id="resetButton" class="btn btn-primary">Nollaa skritpit (ai auttoi :) )</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="d-flex justify-content-center">
-    <button id="moveButton" class="btn btn-danger mt-3">Move Tooltip Button</button>
-  </div>
+
   <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
@@ -171,10 +198,7 @@
     });
   </script>
 
-  <!-- Reset Button -->
-  <div class="d-flex justify-content-center mt-3">
-    <button id="resetButton" class="btn btn-primary">Nollaa skritpit (ai auttoi :) )</button>
-  </div>
+
   <script>
     const initialState = {
       naama1: document.getElementById("naama1").innerHTML,
@@ -202,7 +226,7 @@
   <footer>c Ossi 2025 (footer)</footer>
   <script>
     // alert ja window.alert ovat sama asia. .alertia edeltävä sana on avainsana, joka kertoo objektin, johon metodi liittyy
-    alert("Seikkailu omalla vastuulla!");
+    alert("⚠ VAKAVA ESTEETTINEN VAARA ⚠\n Altistumisen huonolle muotoilulle on todettu aiheuttavan akuuttia mielipahaa ja tarvetta lyödä päätä seinään. jos koet ärsytystä tai vastaavia oireita, poistu välittömästi tältä sivulta ja vieraile ammattilaisten suunnittelemilla verkkosivuilla.")
   </script>
 
   <!-- Bootstrap JS -->
