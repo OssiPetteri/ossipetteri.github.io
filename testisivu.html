@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styletesti.css">
   <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="css/menus.css">
 
   <!-- Google Font: Oswald -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +31,10 @@
        /* <!-- Google fontti oswald --> */
       
   </style>  
-  <title>TESTING! Mental danger!</title>
+  <title>TESTING! Mental hazard!!</title>
+
+  <!-- tämä jokaiselle sivulle, jossa pudotusvalikkoa käytetään -->
+  <script src="/js/dropdown-handler.js"></script>
 </head>
 
 <body>
@@ -45,11 +49,11 @@
     <!-- Navigation -->
     <nav class="topbar">
       <ul class="topbar-menu">
-        <li class="menu-item"><a href="index.html#main">Home</a></li>
+        <li class="menu-item"><a href="cv.html">CV</a></li>
         <li class="menu-item"><a href="landing-page.html">Landing</a></li>
 
         <li class="menu-item dropdown">
-          <a href="#" class="dropdown-toggle">Dropdown</a>
+          <a href="portfolio/index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Portfolio</a>
           <ul class="dropdown-menu">
             <li><a href="option1.html">Option 1</a></li>
             <li><a href="option2.html">Option 2</a></li>
@@ -94,15 +98,32 @@
         function bigger1() {
           document.getElementById('naama1').style.fontSize = '3em';
         }
-      </script>
+        </script>
     </div>
-
+    
     <div class="ratio-side mid">
       <p>FLEXBOX</p>
     </div>
   </div>   <!-- ? -->
   <!-- flexBOX päättyy -->
-   <!-- flex alkaa -->
+  <!-- kuva ja nappulat ja teksti -->
+  <div>
+    <div>
+      <picture> <!-- selain valitsee ensimmäisen toimivan vaihtoehdon, viimeinen elementti pitää olla <img>-->
+        <source srcset="img/tst/phone.jpg" media="(pointer: coarse)">
+        <source srcset="img/tst/narr.jpg" media="(orientation: portrait)">
+        <img class="thumb" src="img/tst/norm.jpg" alt="vrum vrum" title="thumberson">
+      </picture>
+      <div style="margin: auto;">
+      <!-- External JS Test -->
+        <button type="button" onclick="ulko()">haetaanpa scriptiä ulkoisesta tiedostosta</button>
+        <script src="js/jstesti.js"></script>
+        <p id="ulkohaku">...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- flex alkaa -->
   <div style="display: flex; border: 2px solid yellow;">
     <div class="ratio-small" style="flex-shrink: 0;">
       <p style="font-size: 1.5em; text-align: center;">
@@ -131,19 +152,16 @@
     </div>
 
     <div class="ratio-side mid">
+      <picture>
+        <source srcset="img/tst/side-portrait.jpg" media="(orientation: portrait)">
+        <source srcset="img/tst/side-mobile.jpg" media="(pointer: coarse)">
+        <img src="img/tst/side-default.jpg" alt="Side Image">
+      </picture>
       <p>FLEXXXX</p>
     </div>
   </div>   
   <!-- flex päättyy -->
 
-  <!-- kuva ja nappulat ja teksti -->
-  <div style="margin: auto;">
-    <img class="thumb" src="img/tsivu.jpg" alt="vrum vrum" title="thumberson">
-  <!-- External JS Test -->
-    <button type="button" onclick="ulko()">haetaanpa scriptiä ulkoisesta tiedostosta</button>
-    <script src="js/jstesti.js"></script>
-    <p id="ulkohaku">...</p>
-  </div>
 
   <p>Google fontti oswald</p>
   <p id="ugly">Onpas jotenkin huono fontti...</p>

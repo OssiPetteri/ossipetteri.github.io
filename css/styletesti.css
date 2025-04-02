@@ -2,9 +2,10 @@
     /* Styles for portrait orientation */
     html, body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: pink;
+    background-color: maroon;
     }
 }
+
     /* testaa syötemetodin avulla, onko kyseessä mobiililaite vai tietokone */
 @media (pointer: coarse) {
     /* Styles for mobile devices (touch input) */
@@ -13,13 +14,9 @@
     }
   }
 
-* {
-    /* overflow-x: hidden;  */
-        /*EI OPTIMI! Prevents overflow. periaatteessa toimii mutta tekstiosiot haluavat nyt scrollata, vaikka ylivuotoa ei tapahtuisikaan */
-}
 body{
-    /* taustakuva CSS:sä */
-    background-image: url("/img/img-912.jpg");
+    /* taustakuva CSS:sä, polku näkyy live serverillä muttei online sivulla? */
+    background-image: url("mg/img.jpg"); /* Taustakuva */
     background-attachment: fixed; /* Kiinnittää taustakuvan */
     background-repeat: repeat-x; 
     background-position:top;

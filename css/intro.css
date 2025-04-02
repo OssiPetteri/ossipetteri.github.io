@@ -11,6 +11,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1ch;
 }
 
 .intro-screen {
@@ -42,32 +43,56 @@ body, html {
   height: 100%;
   /* align-items: center; */
   justify-content: center;
+  /* border: solid red; */
+
+  
+  .menu {
+    /* background: #101018; */
+    color: #eee;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 12ch;
+    /* border: solid yellow; */
+    /* margin: auto; */
+  }
+  
+  .menu a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin: 1rem 0;
+    /* transform: translateX(-38%); */
+  }
+  
+  .visual {
+    /* background: #645747; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+  }
+}
+@media (min-aspect-ratio: 2.5/1) {
+    .content {
+        aspect-ratio: 2 / 1;
+        /* max-width: 100vh; */
+    }
+    .main-screen {
+        justify-items: center;
+    }
 }
 
-.menu {
-  /* background: #101018; */
-  color: #eee;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 12ch;
-
-}
-
-.menu a {
-  color: #eee;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin: 1rem 0;
-}
-
-.visual {
-  /* background: #645747; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 2em;
+/* myöhemmin lisättävä mobiilipelinäkymä */
+@media (pointer: coarse) and (orientation: portrait) {
+    
+    .intro-screen {
+        background-color: maroon;
+ }
+    .main-screen {
+        background-color: midnightblue
+    }
 }
