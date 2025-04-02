@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menus.css">
     <link rel="stylesheet" href="css/print.css">
 
     <title>Jyrin Vitae</title>
@@ -12,17 +13,21 @@
 <body>
   <div>
     <header>
-      <nav>
-        <a href="index.html#main" class="naplink"> 
-          <button> KOTI</button>
-        </a>
-        <a href="cv.html" class="naplink">
-          <button>Saavutukset</a></button>
-        </a>
-        <a href="hobby.html" class="naplink">
-          <button>Kiinnostavat</button>
-        </a>
-        <br>
+      <!-- Imported topbar navigation -->
+      <nav class="topbar">
+        <ul class="topbar-menu">
+          <li class="menu-item"><a href="cv.html">CV</a></li>
+          <li class="menu-item"><a href="landing-page.html">Landing</a></li>
+          <li class="menu-item dropdown">
+            <a href="portfolio/index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Portfolio</a>
+            <ul class="dropdown-menu">
+              <li><a href="option1.html">Option 1</a></li>
+              <li><a href="option2.html">Option 2</a></li>
+              <li><a href="option3.html">Option 3</a></li>
+            </ul>
+          </li>
+          <li class="menu-item ms-auto"><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
     </div>
     
@@ -121,5 +126,7 @@
  
 </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
