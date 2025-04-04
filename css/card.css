@@ -1,0 +1,31 @@
+/* cv kortit */
+
+.card{
+    background-color: #1f1c1a;
+    border: 4px #38342f solid;
+    /* border-radius: 1em; */
+    /* justify-content: stretch; */
+    margin-right:1rem;
+    margin-bottom: 1rem; 
+    /* margin: auto; */
+    padding: 0.5rem;
+    min-width: 19ch;
+    max-width: 37ch;
+    display: flexbox;
+    /* flex-direction: column; */
+}
+
+.cvlist{
+    /* width: fit-content; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* list-style-type: none; */
+}
+/* ei toimi */
+.merit{
+    max-width: 17%;
+    height: auto;
+    /* korostus! */
+        border: 1px yellow solid;
+}
+    /* korostus! */

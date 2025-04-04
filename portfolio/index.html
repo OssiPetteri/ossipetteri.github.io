@@ -12,22 +12,24 @@
   <script src="../js/dropdown-handler.js"></script>
 </head>
 <body>
-  <!-- Topbar Navigation -->
-  <nav class="topbar">
-    <ul class="topbar-menu">
-      <li class="menu-item"><a href="../cv.html">CV</a></li>
-      <li class="menu-item"><a href="../index.html">Landing</a></li>
-      <li class="menu-item dropdown">
-        <a href="index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Portfolio</a>
-        <ul class="dropdown-menu">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#resume">Resume</a></li>
-        </ul>
-      </li>
-      <li class="menu-item ms-auto"><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <!-- Imported topbar navigation -->
+    <nav class="topbar">
+      <ul class="topbar-menu">
+        <li class="menu-item"><a href="../cv.html">CV</a></li>
+        <li class="menu-item"><a href="../index.html">Landing</a></li>
+        <li class="menu-item dropdown">
+          <a href="portfolio/index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Portfolio</a>
+          <ul class="dropdown-menu">
+            <li><a href="option1.html">Option 1</a></li>
+            <li><a href="option2.html">Option 2</a></li>
+            <li><a href="option3.html">Option 3</a></li>
+          </ul>
+        </li>
+        <li class="menu-item ms-auto"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Main Content -->
   <main class="container mt-5">

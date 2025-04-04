@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menus.css">
     <link rel="stylesheet" href="css/print.css">
+    <link rel="stylesheet" href="css/card.css">
+
     <title>Jyrin Vitae</title>
   </head>
   <body>
@@ -18,7 +20,7 @@
           <li class="menu-item"><a href="cv.html">CV</a></li>
           <li class="menu-item"><a href="index.html">Landing</a></li>
           <li class="menu-item dropdown">
-            <a href="portfolio/index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Portfolio</a>
+            <a href="portfolio/" class="dropdown-toggle" onclick="handleDropdownClick(event)">Portfolio</a>
             <ul class="dropdown-menu">
               <li><a href="option1.html">Option 1</a></li>
               <li><a href="option2.html">Option 2</a></li>
@@ -30,45 +32,39 @@
       </nav>
     </header>
 
-    <div class="container mt-4">
+    <div>
       <h1 class="text-center">Työelämän kohokohdat</h1>
 
-      <div class="text-center my-4">
-        <img class="cvimg img-fluid" src="img/cv.jpg" alt="työhistoriaa">
+      <div class="banner">
+        <img src="img/cv/4429.jpg" alt="työhistoriaa">
       </div>
 
       <div>
-        <del>
-          <h1>Yhteystiedot</h1>
-          <p>Jyrin Vitae</p>
-          <p>040 123 4567</p>
-        </del>
-
+       
         <!-- tulostusnappula -->
         <div class="position-relative">
           <button class="btn btn-primary" onclick="window.print()" style="position: absolute; top: 0; right: 0;">Print</button>
         </div>
 
         <h1>Työkokemus</h1>
-        <ul class="cvlist">
-          <!-- work1 -->
+        <ul class=" row container-fluid" style="border: solid yellow;">
           <li class="card list-group-item" title="Kirjastoapulainen">
             <p>Kirjastoapulainen</p>
-            <p>8/2024 - 2/2025</p>
             <p>Mikkelin pääkirjasto</p>
+            <p class="date">8/2024 - 2/2025</p>
             <p>Kirjaston avustavat tehtävät, kuten kirjojen järjestely, hyllytys ja asiakas&shy;palvelu. Kirjavarausten käsittely ja kadonneiden / laskutettavien niteiden etsintä</p>
           </li>
           <li class="card list-group-item" title="Hankesuunnittelija">
             <p>Hankesuunnittelija</p>
-            <p>9/2022 - 12/2022</p>
             <p>Rajupusu Leader ry</p>
+            <p>9/2022 - 12/2022</p>
             <p>Yhdistyksen toimintastrategian mukaisen ympäristö&shy;hanke&shy;kokonaisuuden hahmottelu. Hankes&shy;suunnittelman ja hanke&shy;rahoitus&shy;hakemuksen laatiminen ympäristö&shy;valistus&shy;hankkeelle</p>
           </li>
-          <li class="card list-group-item" title="placeholder">
-            <p>tehtävä</p>
-            <p>kuukausi / vuosi</p>
-            <p>työnantaja</p>
-            <p>kuvaus tehtävistä</p>
+          <li class="card list-group-item" title="Tuotantotyöntekijä">
+            <p>Tuotanto&shy;työn&shy;tekijä</p>
+            <p>Eurofins Viljavuuspalvelu</p>
+            <p class="date">4/2020 - 6/2020, 9/2020 - 12/2020, 2/2021 - 6/2021</p>
+            <p>Maanäytteiden esikäsittelijä. Automaattisen maanäytteiden esikäsittelylinjaston käyttötehtävät ja häiriönkorjaus; </p>
           </li>
         </ul>
       </div>
