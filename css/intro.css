@@ -12,6 +12,7 @@ body, html {
   justify-content: center;
   align-items: center;
   padding: 1ch;
+
 }
 
 .intro-screen {
@@ -19,6 +20,20 @@ body, html {
   color: #eee;
   font-size: 2em;
   cursor: pointer;
+    /* väriefekti mobiililla painettaessa */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: 0.35s ease;
+}
+  /* väriefekti mobiililla painettaessa */
+.intro-screen:active {
+  /* opacity: 0.5; */
+  background-color: #2e2a27;
+  transition: /*opacity 0.35s ease,*/ background-color 0.35s ease; /* Added background-color transition */    /* Smooth transition  */
+    /* tekstivalintaesto */
+  -webkit-user-select: none; /* Disable text selection on Safari/Chrome */
+  -ms-user-select: none; /* Disable text selection on IE/Edge */
+  user-select: none; /* Disable text selection on modern browsers */
 }
 
 .main-screen {
@@ -33,7 +48,7 @@ body, html {
   padding: 1rem;
   text-align: center;
   font-size: 1.5em;
-}  
+}
 
 
 
@@ -90,9 +105,8 @@ body, html {
 @media (pointer: coarse) and (orientation: portrait) {
     
     .intro-screen {
-        background-color: maroon;
+       
  }
     .main-screen {
-        background-color: midnightblue
     }
 }
