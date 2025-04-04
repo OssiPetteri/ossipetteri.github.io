@@ -9,6 +9,7 @@ body{
     background-color: #141211;
     text-align: justify;
     margin: 0;
+    margin-top: 4rem; /* Adjust based on the height of the top bar */
     }
 
 
@@ -24,6 +25,15 @@ header{
     padding: 1em;
     text-align: center;
 }
+
+header .topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #141211; /* Ensure the top bar has a background */
+}
+
 p {
     line-height: 1.41em;
     margin-top: 0;
@@ -48,7 +58,7 @@ border: 2px solid #38342f;
 }
 
 iframe{  
-    width: 100%;  
+    max-width: 100%;  
     height: auto;
 }
 
@@ -111,6 +121,7 @@ button:hover{
     background-color .35s,
     border-color .35s;
 } 
+
 
 .naplink{
     text-decoration: none;
