@@ -1,24 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     color: #eee;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-family: 'Roboto', helvetica, Arial, sans-serif;
     /* vertical-align: top; */
     
 }
 
 body{
     background-color: #141211;
-    text-align: justify;
     margin: 0;
-    margin-top: 4rem; /* Adjust based on the height of the top bar */
+    /* margin-top: 4rem;  */
+        /* Adjust based on the height of the top bar */
     }
 
 
-
+section{
+    margin: 0 0;
+}
 
 h1, h2, h3{
     color: #eee;
     margin: auto; 
     margin-bottom: 1em;
+    font-family: 'Roboto Slab', Georgia, 'Times New Roman';
+
 }
  
 header{
@@ -63,7 +68,13 @@ iframe{
 }
 
 /* tekstilaatikko */
-input{
+input, textarea {
+    background-color: #1e1e1e; /* Dark background */
+    color: #eee; /* Light text color */
+    border: 1px solid #38342f; /* Subtle border to match the theme */
+    padding: 0.5em;
+    border-radius: 4px;
+    font-size: 1em;
     margin-left: 1rem;
 
     @media print {
@@ -96,8 +107,8 @@ button{
     min-width: 4em;
     padding: 0.5em;
     box-shadow: 
-    inset .5em .5em .5em rgba(114, 114, 161, .125),
-    inset -.5em -.5em .5em rgba(160, 142, 121, .125);
+        inset .5em .5em .5em rgba(114, 114, 161, .125),
+        inset -.5em -.5em .5em rgba(160, 142, 121, .125);
     transition-duration: .35s;
     word-wrap: break-word;
 }
@@ -136,6 +147,7 @@ button:hover{
 }
 /* ei tee ihan mitä halutaan vielä */
 .banner {
+    object-fit: contain;
     position: relative; 
         /* Positioning relative to the parent */
     width: 100%; 
@@ -149,3 +161,12 @@ button:hover{
     z-index: -1;
     overflow-x: hidden;
 }
+ .content {
+    /* position: absolute;  */
+        /* Positioning relative to the parent */
+
+    /* overflow-x: hidden; */
+    max-width: 150ch;
+    border: solid white;
+    justify-self: center;
+ }

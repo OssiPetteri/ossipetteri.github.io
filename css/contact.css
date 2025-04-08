@@ -1,0 +1,22 @@
+* Style for input and textarea fields */
+input, textarea {
+    background-color: #1e1e1e; /* Dark background */
+    color: #eee; /* Light text color */
+    border: 1px solid #38342f; /* Subtle border to match the theme */
+    padding: 0.5em;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Add focus effect for better UX */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #645747; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(100, 87, 71, 0.5);
+}
+
+/* Style for placeholder text */
+input::placeholder, textarea::placeholder {
+    color: #aaa; /* Subtle color for placeholder text */
+    font-style: 'roboto', sans-serif; /* Font style for placeholder text */
+}

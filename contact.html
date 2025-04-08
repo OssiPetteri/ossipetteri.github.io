@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/menus.css">
+    <link rel="stylesheet" href="css/print.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Top bar -->
+    <header>
+        <div class="top-bar">
+            Jyri Tiusanen
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="portfolio/">Portfolio</a></li>
+                <li><a href="extra/">Extras</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <h1>Contact</h1>
+        <p>If you have any questions or inquiries, feel free to reach out using the form below:</p>
+        <form action="https://formspree.io/f/xnnpokdz" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Nimi">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Sähköposti">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <!-- my email address :) -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <script src="js/dropdown-handler.js"></script>
+</body>
+</html>
