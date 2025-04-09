@@ -9,62 +9,74 @@
     <link rel="stylesheet" href="css/menus.css">
     <link rel="stylesheet" href="css/print.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 
-    <title>Jyrin Vitae</title>
+
+    <title>Jyri Tiiviisti</title>
   </head>
   <body>
     <header>
       <!-- Imported topbar navigation -->
       <nav class="topbar">
         <ul class="topbar-menu">
-          <li class="menu-item"><a href="cv.html">CV</a></li>
-          <li class="menu-item"><a href="index.html">Landing</a></li>
+          <li class="menu-item"><a href="../cv.html">CV</a></li>
+          <li class="menu-item"><a href="../index.html">Landing</a></li>
           <li class="menu-item dropdown">
-            <a href="portfolio/" class="dropdown-toggle" onclick="handleDropdownClick(event)">Portfolio</a>
+            <a href="portfolio/index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Portfolio</a>
             <ul class="dropdown-menu">
-              <li><a href="option1.html">Option 1</a></li>
-              <li><a href="option2.html">Option 2</a></li>
-              <li><a href="option3.html">Option 3</a></li>
+              <li><a href="./portfolio/work.html">Työhistoria</a></li>
+              <li><a href="./portfolio/edu.html">Koulutus</a></li>
+              <li><a href="./portfolio/other.html">Muuta</a></li>
             </ul>
+          <li class="menu-item dropdown">
+  
+            <a href="extra/index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Bonus content</a>
+            <ul class="dropdown-menu">
+              <li><a href="option3.html">Jorma Erä</a></li>
+              <li><a href="option2.html">Valokuvaus</a></li>
+              <li><a href="option1.html">Videopeliharrastus</a></li>
+            </ul>
+          </li>
           </li>
           <li class="menu-item ms-auto"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <div>
-      <h1 class="text-center">Työelämän kohokohdat</h1>
-
-      <div class="banner">
-        <img src="img/cv/4429.jpg" alt="työhistoriaa">
-      </div>
+    <div class="banner">
+      <img src="img/cv/img-3290.jpg" alt="omakuva" style="object-fit: cover; object-position: 10% 50%;">
+    </div>
+    <section class="container-fluid">
+      <h2 class="text-center">Työelämän kohokohdat</h2>
+      
+      <!-- kuvan sisällön keskitys ei suostu toimimaan -->
 
       <div>
        
         <!-- tulostusnappula -->
-        <div class="position-relative">
+        <div class="position-relative content">
           <button class="btn btn-primary" onclick="window.print()" style="position: absolute; top: 0; right: 0;">Print</button>
         </div>
-
-        <h1>Työkokemus</h1>
-        <ul class=" row container-fluid">
-          <li class="card list-group-item" title="Kirjastoapulainen">
+        <!-- idea: aktivoimalla/klikkaamalla card-exp -->
+        <h2>Työkokemus</h2>
+        <ul class="row container-fluid">
+          <li class="card " title="Kirjastoapulainen" onclick="toggleCardClass(this)">
             <p>Kirjastoapulainen</p>
             <p>Mikkelin pääkirjasto</p>
             <p class="date">8/2024 - 2/2025</p>
-            <p>Kirjaston avustavat tehtävät, kuten kirjojen järjestely, hyllytys ja asiakas&shy;palvelu. Kirjavarausten käsittely ja kadonneiden / laskutettavien niteiden etsintä</p>
+            <p class="job">Kirjaston avustavat tehtävät, kuten kirjojen järjestely, hyllytys ja asiakas&shy;palvelu. Kirjavarausten käsittely ja kadonneiden / laskutettavien niteiden etsintä</p>
           </li>
-          <li class="card list-group-item" title="Hankesuunnittelija">
+          <li class="card" title="Hankesuunnittelija" onclick="toggleCardClass(this)">
             <p>Hankesuunnittelija</p>
             <p>Rajupusu Leader ry</p>
             <p>9/2022 - 12/2022</p>
-            <p>Yhdistyksen toimintastrategian mukaisen ympäristö&shy;hanke&shy;kokonaisuuden hahmottelu. Hankes&shy;suunnittelman ja hanke&shy;rahoitus&shy;hakemuksen laatiminen ympäristö&shy;valistus&shy;hankkeelle</p>
+            <p class="job">Yhdistyksen toiminta&shy;strategian mukaisen ympäristö&shy;hanke&shy;kokonaisuuden hahmottelu. Hanke&shy;suunnittelman ja hanke&shy;rahoitus&shy;hakemuksen laatiminen ympäristö&shy;valistus&shy;hankkeelle</p>
           </li>
-          <li class="card list-group-item" title="Tuotantotyöntekijä">
+          <li class="card" title="Tuotantotyöntekijä" onclick="toggleCardClass(this)">
             <p>Tuotanto&shy;työn&shy;tekijä</p>
             <p>Eurofins Viljavuuspalvelu</p>
             <p class="date">4/2020 - 6/2020, 9/2020 - 12/2020, 2/2021 - 6/2021</p>
-            <p>Maanäytteiden esikäsittelijä. Automaattisen maanäytteiden esikäsittelylinjaston käyttötehtävät ja häiriönkorjaus; </p>
+            <p class="job">Maanäytteiden esikäsittelijä. Automaattisen maanäytteiden esikäsittelylinjaston käyttötehtävät ja häiriönkorjaus; </p>
           </li>
         </ul>
       </div>
@@ -72,19 +84,29 @@
       <hr>
 
       <div>
-        <h1>Koulutus</h1>
-        <ul class="cvlist list-group">
-          <li class="card">
-            <p>Työtön työnhakija</p>
-            <p>1.2345 - 6.5432</p>
-            <p>Työttömyys instanssi tmi</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nisi quas pariatur quis sunt vero vitae voluptatum, eum, in doloremque quod natus rerum suscipit. Odit, suscipit! Qui aperiam blanditiis modi.</p>
+        <h2>Koulutus</h2>
+        <ul class="row container-fluid">
+          <li class="card" title="Digimuuntamo 1.0" onclick="toggleCardClass(this)">
+            <p>Työvoimakoulutus, Digimuuntamo 1.0</p>
+            <p>KasvuEsedu, Mikkeli</p>
+            <p>3/2025 - 4/2025</p>
+            <p class="job">Matalan kynnyksen tiivis koulutus digitaitojen parantamiseksi</p>
+            <p class="job">Ohjelmointipolku. Verkkosivuprojekti HTML-, CSS- ja JavaScript-kielillä; projektitiedostojen järjestely ja hallinta, versionhallinta (Git ja GitHub), VSCode, tekoälyavusteinen ohjelmointi sekä responsiivinen suunnittelu. Muita kokonaisuuksia mm. tekijänoikeudet, tietoturva, projektinhallinta it-alalla, sekä muutokseen sopeutuminen</p>
           </li>
-          <li class="card">
-            <p>Työtön työnhakija</p>
-            <p>1.2345 - 6.5432</p>
-            <p>Työttömyys instanssi tmi</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nisi quas pariatur quis sunt vero vitae voluptatum, eum, in doloremque quod natus rerum suscipit. Odit, suscipit! Qui aperiam blanditiis modi.</p>
+          <li class="card" onclick="toggleCardClass(this)" title="Projektit ja kestävä kehitys">
+            <p>F.E.C<sup>*</sup>-koulutus, asiantuntijataso, Projektit ja kestävä kehitys</p>
+            <p>Suomen ympäristöopisto SYKLI</p>
+            <p>12/2021 - 6/2022</p>
+            <p class="job">Yhteistyöorganisaationa Rajupusu Leader ry ja Piällysmies ry. Työhön sisältyi laatu- ja strategia&shy;työtä: Laatu&shy;käsi&shy;kirjan päivittäminen; Stategia&shy;työssä avustaminen ja tarvittavien tietojen hankinta avoimista lähteistä sekä Hyrrä-tietojärjestelmästä; Teams-etätyöpajojen tekninen tuki</p>
+            <p class="job">Koulutuksen pääteemoja olivat mm. Kiertotalous liike&shy;toiminnassa; kierto&shy;talouden materiaalivirrat ja riskit; ympäristöturvallisuus; projektin suunnittelu, rahoitus, toteutus ja raportointi; sekä viestintä asiantuntijatyössä </p>
+            <p class="job"><sub>*) F.E.C: Further Educated with Companies</sub></p>
+          </li>
+          <li class="card" title="Insinööri AMK, ympäristöteknologia" onclick="toggleCardClass(this)">
+            <p>Insinööri AMK, Ympäristöteknologian koulutusohjelma</p>
+            <p>kaakkois-Suomen ammattikorkeakoulu XAMK, Mikkeli</p>
+            <p>1/2015 - 12/2019</p>
+            <p class="job">Opintojen, harjoittelun ja opinnäytetyön kautta syventyminen kannettaviin ympäristömonitorointilaitteisiin. Opinnäytetyön aiheena <a href="https://www.theseus.fi/handle/10024/262201" title="PID-mittarin käyttö maaperänäytteenotossa" target="_blank" rel="noopener">PID-mittarin käyttö maaperänäytteenotossa</a>.</p>
+            <p class="job">Opinnoissa pääpaino mittauksessa ja mallintamisessa sekä ympäristöterveydessä</p>
           </li>
         </ul>
       </div>
@@ -92,13 +114,16 @@
       <hr>
       <!-- taidot ja Ansiomerkit -->
       <div>
-        <h1>Taidot ja ansiomerkit</h1>
+        <h2>Taidot ja ansiomerkit</h2>
         <iframe class="merit" frameborder="0" scrolling="no" src="https://openbadgepassport.com/app/badge/info/897097/pic/embed"></iframe>
       </div>
-    </div>
+    </section>
     <!-- dropdown handler -->
     <script src="js/dropdown-handler.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- kortin luokka vaihtuu, kun korttia klikataan -->
+    <script src ="js/card-toggle.js"></script>
   </body>
+
 </html>

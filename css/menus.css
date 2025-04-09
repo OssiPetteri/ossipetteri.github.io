@@ -2,13 +2,14 @@
 .topbar {
   background-color: #23201d;
   padding: 1em;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   border: solid white;
   position: fixed;
   width: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .topbar-menu {

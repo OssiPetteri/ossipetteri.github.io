@@ -1,31 +1,72 @@
 /* cv kortit */
 
-.card{
-    background-color: #1f1c1a;
-    border: 4px #38342f solid;
-    /* border-radius: 1em; */
-    /* justify-content: stretch; */
-    margin-right:1rem;
-    margin-bottom: 1rem; 
-    /* margin: auto; */
-    padding: 0.5rem;
-    min-width: 19ch;
-    max-width: 37ch;
-    display: flexbox;
-    /* flex-direction: column; */
+.card-container {
 }
 
-.cvlist{
-    /* width: fit-content; */
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* list-style-type: none; */
-}
-/* ei toimi */
-.merit{
-    max-width: 17%;
-    height: auto;
+.card, .card-exp{
+    background-color: #1f1c1a;
+    border: 4px #38342f solid;
+    border-radius: 1em;
+    justify-content: center;
+    margin-right:1rem;
+    margin-bottom: 1rem; 
+    /* padding: 0.5rem; */
+    min-width: 19ch;
+    max-width: 37ch;
+    display: inline-block;
+    /* justify-content: center; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: start;
+    /* laajennussiirtymä */
+    transition: all 0.6s ease-in-out;
+    overflow: hidden;
+    container-type: inline; /* Enables container queries */
+    
     /* korostus! */
-        border: 1px yellow solid;
-}
+    /* border: 1px yellow solid; */
     /* korostus! */
+}
+
+.card-exp{
+    max-width: 120ch;
+    /* display: block; */
+  
+    
+       
+}
+@media (pointer: coarse) and (orientation: portrait) {
+    .card, .card-exp{
+        max-width: 100%;
+        min-width: 100%;
+        margin-right: 0;
+        text-align: start;
+    }
+}
+/* @container (min-width: 40ch) { */
+    /* .card-exp{ */
+        /* text-align: justify; */
+        /* text-align-last: left; */
+        /* border: solid yellow; */
+    /* } */
+/* } */
+/* ei toimi :,( */
+.card:hover, .card-exp:hover{
+    background-color: #38342f;
+    border: 4px #38342f solid;
+    border-radius: 1em;
+    
+    cursor: pointer;
+}
+/* ei vaikuttaisi toimivan */
+.card .job{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-break: 3;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
