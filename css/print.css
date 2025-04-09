@@ -1,6 +1,7 @@
 /* Print-specific styles for A4 portrait orientation */
 @media print {
     /* General page setup */
+    /* printille pitää ladata roboto serif */
     body {
         margin: 0;
         padding: 1cm; 
