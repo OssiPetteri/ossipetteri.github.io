@@ -9,7 +9,7 @@
 body{
     background-color: #141211;
     margin: 0;
-    margin-top: 4rem; 
+    /* margin-top: 4rem;  */
         /* Adjust based on the height of the top bar */
     }
 a{
@@ -37,7 +37,7 @@ h1, h2, h3{
 }
  
 header{
-    padding: 1em;
+    /* padding: 1em; */
     text-align: center;
 }
 
@@ -46,7 +46,8 @@ header .topbar {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #141211; /* Ensure the top bar has a background */
+    /* background-color: #141211;  */
+        /* Ensure the top bar has a background */
 }
 
 p{
@@ -79,9 +80,9 @@ iframe{
 
 /* tekstilaatikko */
 input, textarea {
-    background-color: #1e1e1e; /* Dark background */
-    color: #eee; /* Light text color */
-    border: 1px solid #38342f; /* Subtle border to match the theme */
+    background-color: #1e1e1e;
+    color: #eee;
+    border: 1px solid #38342f; 
     padding: 0.5em;
     border-radius: 4px;
     font-size: 1em;
@@ -162,7 +163,8 @@ button:hover{
         /* Positioning relative to the parent */
     width: 100%; 
          /* full viewport width */
-    height: auto;
+    height: auto; 
+         /* Maintain aspect ratio */
     max-height: 32.8vh;
     /* object-fit: cover;  */
          /* Ensures the image covers the area without distortion */
@@ -179,6 +181,7 @@ button:hover{
     /* Full width of the container */ 
     /* height: 100%;  */
     /* Maintain aspect ratio */
+    height: rem;
     max-height: 32.8vh; /* Maintain aspect ratio */
     /* overflow: hidden; */
     }
@@ -193,3 +196,5 @@ button:hover{
     border: solid white;
     justify-self: center;
  }
+
+ 
