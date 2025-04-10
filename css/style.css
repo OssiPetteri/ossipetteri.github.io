@@ -200,14 +200,15 @@ button:hover{
 
  .print-button {
     position: fixed;
-    top: 19.9vh;
+    bottom: 0;
     right: 0;
     margin: 1rem;
-    z-index: 1000;
+    z-index: 100;
     border-radius: 0.25em; 
     cursor: pointer;
-    font-weight: 600;
-    padding: 0.5em;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.25em;
     text-decoration: none;
     min-width: 4em;
     
