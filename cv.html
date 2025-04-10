@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/print.css">
     <link rel="stylesheet" href="css/card.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
-
-
+    
+    
     <title>Jyri Tiiviisti</title>
   </head>
   <body>
@@ -29,36 +29,35 @@
               <li><a href="./portfolio/edu.html">Koulutus</a></li>
               <li><a href="./portfolio/other.html">Muuta</a></li>
             </ul>
-          <li class="menu-item dropdown">
-  
-            <a href="extra/index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Bonus content</a>
-            <ul class="dropdown-menu">
-              <li><a href="option3.html">Jorma Erä</a></li>
-              <li><a href="option2.html">Valokuvaus</a></li>
-              <li><a href="option1.html">Videopeliharrastus</a></li>
-            </ul>
-          </li>
+            <li class="menu-item dropdown">
+              
+              <a href="extra/index.html" class="dropdown-toggle" onclick="handleDropdownClick(event)">Bonus content</a>
+              <ul class="dropdown-menu">
+                <li><a href="option3.html">Jorma Erä</a></li>
+                <li><a href="option2.html">Valokuvaus</a></li>
+                <li><a href="option1.html">Videopeliharrastus</a></li>
+              </ul>
+            </li>
           </li>
           <li class="menu-item ms-auto"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-
+    
     <div class="banner">
       <img src="img/cv/img-3290.jpg" alt="omakuva" style="object-fit: cover; object-position: 10% 50%;">
     </div>
     <section class="container-fluid">
+      <button class="print-button" onclick="window.print()">tulosta</button>
       <h2 class="text-center">Työelämän kohokohdat</h2>
       
       <!-- kuvan sisällön keskitys ei suostu toimimaan -->
-
+      
       <div>
-       
+        
         <!-- tulostusnappula -->
         <div class="position-relative content">
-          <button class="btn btn-primary" onclick="window.print()" style="position: absolute; top: 0; right: 0;">Print</button>
         </div>
-        <!-- idea: aktivoimalla/klikkaamalla card-exp -->
         <h2>Työkokemus</h2>
         <ul class="row container-fluid">
           <li class="card " title="Kirjastoapulainen" onclick="toggleCardClass(this)">

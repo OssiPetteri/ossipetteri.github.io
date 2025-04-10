@@ -198,4 +198,19 @@ button:hover{
     justify-self: center;
  }
 
+ .print-button {
+    position: fixed;
+    top: 19.9vh;
+    right: 0;
+    margin: 1rem;
+    z-index: 1000;
+    border-radius: 0.25em; 
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5em;
+    text-decoration: none;
+    min-width: 4em;
+    
+    word-wrap: break-word;  
+}
  
