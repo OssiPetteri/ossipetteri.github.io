@@ -5,8 +5,10 @@ body{
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: #141211; /* Dark background color */
+  background-color: #141211; 
+    /* Dark background color */
   overflow: hidden;
+    /* jompi kumpi overflow varmaan liikaa */
 }
 
 .intro-screen, .main-screen {
