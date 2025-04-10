@@ -41,14 +41,14 @@ header{
     text-align: center;
 }
 
-header .topbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+/* header .topbar { */
+    /* position: fixed; */
+    /* top: 0; */
+    /* width: 100%; */
+    /* z-index: 1000; */
     /* background-color: #141211;  */
         /* Ensure the top bar has a background */
-}
+/* } */
 
 p{
     line-height: 1.41em;

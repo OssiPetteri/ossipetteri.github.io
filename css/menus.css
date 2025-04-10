@@ -1,6 +1,5 @@
 /* Topbar styles */
 .topbar {
-  background-color: #23201d;
   padding: 1em;
   /* display: flex; */
   justify-content: space-between;
@@ -9,6 +8,11 @@
   width: 100%;
   max-width: 100%;
   margin: 0;
+  /* frosted glass effect */
+  background-color: rgba(20, 19, 18, 0.5);
+  backdrop-filter: blur(7px);
+  -webkit-backdown-filter: blur(7px);
+  z-index: 1000;
 }
 
 .topbar-menu {
@@ -18,7 +22,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+  z-index: 99999;
 }
+
+
 
 .menu-item {
   position: relative;
@@ -78,6 +85,9 @@
   .topbar {
     background: none;
     box-shadow: none;
+    /* background-color: none; */
+    backdrop-filter: none;
+    -webkit-backdown-filter: none;
   }
 
   .topbar.active .topbar-menu {
@@ -99,9 +109,11 @@
     right: 0;
     height: 100vh;
     width: 64vw;
-    background-color: #23201d;
+    max-width: 26ch;
+    /* background-color: #23201d; */
     flex-direction: column;
-    padding: 0.5rem;
+    padding-top: 2rem ;
+    /* vertical-align: middle; */
     /* display: none; */
     z-index: 1000;
     /* liuku */
@@ -113,7 +125,15 @@
     /* liuku */
     transform: translateX(0); /* Slide in from the right */
     /* transition: transform 0.3s ease-in-out; Smooth transition */
-  
+    background-color: rgba(20, 19, 18, 0.5);
+    backdrop-filter: blur(7px);
+    -webkit-backdown-filter: blur(7px);
+    align-items: left;
+    text-align: center;
+  }
+  .topbar-menu li{
+  margin-left: 1rem;
+  margin-right: auto;  
   }
 }
 
