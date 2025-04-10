@@ -5,7 +5,6 @@
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
-  border: solid white;
   position: fixed;
   width: 100%;
   max-width: 100%;
@@ -66,20 +65,26 @@
   margin-top: 0.5rem; /* Space from the top */
   z-index: 1000; /* Ensure it's above other elements */
 }
+.hamburger.hidden {
+  display: none;
+}
+
 
 @media (max-width: 768px), (pointer: coarse) and (orientation: portrait) {
   .hamburger {
     display: flex; /* Show on smaller screens */
+    justify-self: end;
   }
-
-  .topbar-menu {
-    display: none; /* Hide the menu by default on small screens */
+  .topbar {
+    background: none;
+    box-shadow: none;
   }
 
   .topbar.active .topbar-menu {
-    display: flex; /* Show the menu when the topbar is active */
+    /* display: flex;  */
+      /* Show the menu when the topbar is active LIUKU */
     flex-direction: column;
-    position: absolute;
+    /* position: absolute; */
     /* top: 100%; */
     /* left: 100%; */
     /* background-color: #38342f; */
@@ -87,7 +92,28 @@
     padding: 1em;
   }
 
+  /* mobiilisivupalkki */
+  .topbar-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 64vw;
+    background-color: #23201d;
+    flex-direction: column;
+    padding: 0.5rem;
+    /* display: none; */
+    z-index: 1000;
+    /* liuku */
+    transform: translateX(100%);
+    transition: transform 0.3s;
+  }
   .topbar-menu.open {
     display: flex; /* Show the menu when the hamburger is clicked */
+    /* liuku */
+    transform: translateX(0); /* Slide in from the right */
+    /* transition: transform 0.3s ease-in-out; Smooth transition */
+  
   }
 }
+
