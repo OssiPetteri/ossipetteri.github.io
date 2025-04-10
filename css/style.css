@@ -139,9 +139,10 @@ button:hover{
     color: white;
     border-color: #fff;
     opacity: 1;
-    transition: color 0.35s,
-    background-color .35s,
-    border-color .35s;
+    transition: 
+        color 0.35s,
+        background-color 35s,
+        border-color .35s;
 } 
 
 
@@ -193,7 +194,7 @@ button:hover{
 
     /* overflow-x: hidden; */
     max-width: 150ch;
-    border: solid white;
+    /* border: solid white; */
     justify-self: center;
  }
 

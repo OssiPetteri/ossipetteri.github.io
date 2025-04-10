@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jyri Tiusanen</title>
-  <link rel="stylesheet" href="css/style.css">
-   <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
     <!-- logosta pitää tehdä paksumpi jotta se näkyy paremmin tässä yhteydessä, muuten 192 px toimii ainakin moderneissa selaimissa -->
   <link rel="stylesheet" href="css/intro.css">
   <style>
@@ -15,9 +15,9 @@
 </head>
 <body>
   <!-- Intro Screen -->
-  <div class="intro-screen" onclick="setTimeout(() => document.getElementById('main').scrollIntoView(), 273)">
-    <header> welcome! click to continue </header>
-      </header>
+  <div class="intro-screen" onclick="console.log('Intro clicked');">
+      
+        <div class="intro-button">Click to continue</div>
   </div>
 
   <!-- Main Screen -->
@@ -39,5 +39,6 @@
   </div>
 
   <a href="./contact.html" class="contact-link">Contact</a>
+  <script src="./js/scripts.js"></script>
 </body>
 </html>

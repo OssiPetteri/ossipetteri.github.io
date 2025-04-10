@@ -6,6 +6,7 @@ body{
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: #141211; /* Dark background color */
+  overflow: hidden;
 }
 
 .intro-screen, .main-screen {
@@ -14,10 +15,6 @@ body{
   justify-content: center;
   align-items: center;
   padding: 1ch;
-  /* korostus */
-  border: solid 1px yellow;
-  /* korostus */
-  
 }
 
 .intro-screen {
@@ -25,20 +22,21 @@ body{
   color: #eee;
   font-size: 2em;
   cursor: pointer;
-    /* väriefekti mobiililla painettaessa */
+  /* väriefekti mobiililla painettaessa */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   transition: 0.35s ease;
 }
-  /* väriefekti mobiililla painettaessa */
+/* väriefekti mobiililla painettaessa */
 .intro-screen:active {
   /* opacity: 0.5; */
   background-color: #2e2a27;
   transition: /*opacity 0.35s ease,*/ background-color 0.35s ease; /* Added background-color transition */    /* Smooth transition  */
-    /* tekstivalintaesto */
+  /* tekstivalintaesto */
   -webkit-user-select: none; /* Disable text selection on Safari/Chrome */
   -ms-user-select: none; /* Disable text selection on IE/Edge */
   user-select: none; /* Disable text selection on modern browsers */
+  z-index: 9999;
 }
 
 .main-screen {
@@ -88,13 +86,12 @@ body{
 }
   
   .visual {
-    /* background: #645747; */
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 2em;
+    font-size: clamp (0.5em, 4.5vw, 3em);
     font-family: 'Roboto Slab', Georgia, 'Times New Roman';
   }
 }
